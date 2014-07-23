@@ -153,7 +153,7 @@
     oi.cellOralAddress = [dic objectForKey:WKEY_ORALINFO_COMPANYNAME];
 
     //面试时间
-    //TODO:工作类型
+    //工作类型
     oi.cellOralWorkType = [dic objectForKey:WKEY_WORK_TYPE];
     //联系人
     oi.cellOralContacts = [dic objectForKey:WKEY_LINKMAN];
