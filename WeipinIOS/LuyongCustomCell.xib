@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="招聘职位" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kim-W8-2tE">
-                        <rect key="frame" x="30" y="84" width="253" height="21"/>
+                        <rect key="frame" x="36" y="89" width="253" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.29573891930000001" green="0.29573891930000001" blue="0.29573891930000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>

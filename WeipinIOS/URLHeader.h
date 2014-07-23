@@ -88,7 +88,7 @@
 #define WKEY_ORALINFO_ORALTIME @"oralTime"
 
 //联系人
-#define WKEY_LINKMAN @"comLinkMan"
+#define WKEY_LINKMAN @"comLinkman"
 //录用时间
 #define WKEY_EMP_TIME @"empTime"
 //录用地址

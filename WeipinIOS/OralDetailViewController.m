@@ -26,7 +26,7 @@
 {
     [super viewDidLoad];
     self.title = @"详细";
-    MJAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    MJAppDelegate *appDelegate = (MJAppDelegate *)[[UIApplication sharedApplication] delegate];
     oralInfo = appDelegate.oralInfos;
     if (![oralInfo.cellOralRst isEqualToString:@"0"]) {
         _toudiButton.hidden = YES;
@@ -38,9 +38,9 @@
     _oralTimeText.text = oralInfo.cellOralTime;
     _oralAddrText.text = oralInfo.cellAddress;
     _oralTelText.text = oralInfo.cellOralTel;
-    NSString *s = @"/月(税前)";
+    NSString *s = @"元/月(税前)";
     _oralSalaryText.text = [oralInfo.cellSalary stringByAppendingString:s];
-    _oralWorkYear.text = oralInfo.cellWorkYear;
+    _oralWorkYear.text =[ oralInfo.cellWorkYear stringByAppendingString:@"年"];
 }
 
 - (void)didReceiveMemoryWarning

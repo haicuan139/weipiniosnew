@@ -145,6 +145,7 @@
     //面试状态
     oi.cellOralState = [dic objectForKey:WKEY_ORALINFO_REST];
     oi.cellTime = [dic objectForKey:WKEY_ORALINFO_TIME];
+    oi.cellCreateTime = [dic objectForKey:WKEY_ORALINFO_TIME];
     oi.cellSalary = [dic objectForKey:WKEY_ORALINFO_SALARY];
     oi.cellOralTel = [dic objectForKey:WKEY_ORALINFO_TEL];
     oi.cellOralTime = [dic objectForKey:WKEY_ORALINFO_ORALTIME];//TODO:改为面试时间

@@ -68,7 +68,7 @@
     return cell;
 }
 - (void)onItemClick:(NSInteger)index{
-        MJAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        MJAppDelegate *appDelegate = (MJAppDelegate *)[[UIApplication sharedApplication] delegate];
         OralsInfoBean *oralInfo = [array objectAtIndex:index];
         appDelegate.oralInfos = oralInfo;
         [self pushViewControllerWithStorboardName:@"textdetail" sid:@"textdetail"];

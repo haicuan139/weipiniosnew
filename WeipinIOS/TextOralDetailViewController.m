@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    MJAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    MJAppDelegate *appDelegate = (MJAppDelegate *)[[UIApplication sharedApplication] delegate];
     OralsInfoBean *oralInfo = appDelegate.oralInfos;
     MyInfosBean *info = [self getUserInfo];
     //通过面试
@@ -47,7 +47,7 @@
         t = [t stringByAppendingString:@"公司名称:"];
         t = [t stringByAppendingString:oralInfo.cellNCompanyName];
         t = [t stringByAppendingString:@"\n月薪:"];
-        t = [t stringByAppendingString:oralInfo.cellSalary];
+        t = [[t stringByAppendingString:oralInfo.cellSalary]stringByAppendingString:@"元/月(税前)"];
         t = [t stringByAppendingString:@"\n入职时间:"];
         t = [t stringByAppendingString:oralInfo.cellOfferTime];
         t = [t stringByAppendingString:@"\n入职地址:"];

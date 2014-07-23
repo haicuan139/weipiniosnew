@@ -51,6 +51,8 @@
 		2246CFA6195C15EC000202D8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2246CFA5195C15EC000202D8 /* BaseViewController.m */; };
 		2246CFA9195C39DF000202D8 /* RegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2246CFA8195C39DF000202D8 /* RegViewController.m */; };
 		2246CFAB195C3A17000202D8 /* reg.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2246CFAA195C3A17000202D8 /* reg.storyboard */; };
+		224E4C6F197F693D00EB546C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22100F1A1959C576009742E1 /* Foundation.framework */; };
+		224E4C70197F694900EB546C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA1DA9196430C60024D192 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2268DD82196AAE7E0055B301 /* haoyou_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2268DD81196AAE7E0055B301 /* haoyou_normal.png */; };
 		2268DD85196AB24E0055B301 /* MyUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2268DD84196AB24E0055B301 /* MyUITabBarController.m */; };
 		2272C2ED196BD2C200F0B9B8 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2272C2EC196BD2C200F0B9B8 /* CustomCell.xib */; };
@@ -110,8 +112,6 @@
 		22F799D5197694A20008C835 /* GzipCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F799CF197694A20008C835 /* GzipCompressor.m */; };
 		22F799D6197694A20008C835 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F799D1197694A20008C835 /* JSONKit.m */; };
 		22F799D7197694A20008C835 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F799D3197694A20008C835 /* OpenUDID.m */; };
-		22F799D91976D5F90008C835 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F799D81976D5F90008C835 /* Foundation.framework */; };
-		22F799DB1976D6050008C835 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F799DA1976D6050008C835 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		22F9A199196D63B300A04237 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F9A198196D63B300A04237 /* Security.framework */; };
 		22F9A19B196D63BE00A04237 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F9A19A196D63BE00A04237 /* libiconv.dylib */; };
 		22F9A19D196D63CC00A04237 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F9A19C196D63CC00A04237 /* libsqlite3.dylib */; };
@@ -338,8 +338,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F799DB1976D6050008C835 /* CFNetwork.framework in Frameworks */,
-				22F799D91976D5F90008C835 /* Foundation.framework in Frameworks */,
+				224E4C70197F694900EB546C /* CFNetwork.framework in Frameworks */,
+				224E4C6F197F693D00EB546C /* Foundation.framework in Frameworks */,
 				22ADEB71197686B800EA2BEC /* libBPush.a in Frameworks */,
 				22F9A1A3196D63E500A04237 /* libz.dylib in Frameworks */,
 				22FD896219750D870040D41E /* libSocialWechat.a in Frameworks */,

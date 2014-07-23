@@ -158,7 +158,7 @@
 //}
 -(void)onItemClick:(NSInteger)index
 {
-    MJAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    MJAppDelegate *appDelegate = (MJAppDelegate *)[[UIApplication sharedApplication] delegate];
     OralsInfoBean *oralInfo = [array objectAtIndex:index];
     appDelegate.oralInfos = oralInfo;
     [self pushViewControllerWithStorboardName:@"detail" sid:@"detail"];
@@ -199,6 +199,7 @@
     NSString *res = [request responseString];
     NSArray *arr = [self toArrayOrNSDictionary:res];
     NSMutableArray *oralArray = [[NSMutableArray alloc] init];
+    NSLog(@"%@",res);
     if (arr == nil) {
         NSLog(@"解析失败");
     }else{
