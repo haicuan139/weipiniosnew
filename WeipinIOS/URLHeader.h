@@ -87,6 +87,16 @@
 //面试时间
 #define WKEY_ORALINFO_ORALTIME @"oralTime"
 
+//联系人
+#define WKEY_LINKMAN @"comLinkMan"
+//录用时间
+#define WKEY_EMP_TIME @"empTime"
+//录用地址
+#define WKEY_EMP_ADDR @"empAddress"
+//工作类型
+#define WKEY_WORK_TYPE @"hireType"
+//工作年限
+#define WKEY_WORK_YEAR @"workYear"
 
 
 

@@ -17,11 +17,13 @@
 
 @property (retain, nonatomic) IBOutlet UILabel *cellOralAddressLable;//面试地址
 
-@property (retain, nonatomic) IBOutlet UILabel *cellOralTime;//创建时间
+@property (retain, nonatomic) IBOutlet UILabel *cellOralTime;//面试时间
 
 @property (retain, nonatomic) IBOutlet UIButton *cellOralState;//面试状态
 
 @property (retain, nonatomic) IBOutlet UILabel *cellOralTel;//联系电话
 
 @property (retain, nonatomic) IBOutlet UILabel *cellOralContacts;//联系人
+
+@property (retain, nonatomic) IBOutlet UILabel *cellCreateTime;//创建时间
 @end

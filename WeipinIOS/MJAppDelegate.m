@@ -70,6 +70,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     // Override point for customization after application launch.
     [UMSocialData setAppKey:@"53bcfc2056240bf0470623e7"];
     [UMSocialWechatHandler setWXAppId:@"wxd9a39c7122aa6516" url:@"http://www.umeng.com/social"];
@@ -98,6 +99,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 

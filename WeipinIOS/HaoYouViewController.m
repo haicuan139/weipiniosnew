@@ -32,7 +32,8 @@
     UIButton *shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [shareButton setTitle:@"点击分享给好友" forState:UIControlStateNormal];
     shareButton.frame = CGRectMake(0, 0, 320, 40);
-    shareButton.backgroundColor = [UIColor redColor];
+    shareButton.backgroundColor = [UIColor whiteColor];
+    [shareButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [shareButton addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:shareButton];
     [shareButton release];

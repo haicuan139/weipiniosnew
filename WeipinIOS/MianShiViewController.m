@@ -57,6 +57,7 @@
         cell.cellOralTime.text = [time stringByAppendingString:b.cellOralTime];
         cell.cellOralContacts.text = [lianxiren stringByAppendingString:b.cellOralContacts];
         cell.cellOralTel.text = [tel stringByAppendingString:b.cellOralTel];
+        cell.cellCreateTime.text = b.cellCreateTime;
         if ([b.cellOralRst isEqualToString:@"4"]) {
             //未通过
             [cell.cellOralState setTitle:@"未通过" forState:UIControlStateNormal];

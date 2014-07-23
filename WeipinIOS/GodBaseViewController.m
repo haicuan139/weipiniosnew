@@ -150,18 +150,16 @@
     oi.cellOralTime = [dic objectForKey:WKEY_ORALINFO_ORALTIME];//TODO:改为面试时间
     //面试地址
     oi.cellOralAddress = [dic objectForKey:WKEY_ORALINFO_COMPANYNAME];
-    //联系电话
-    oi.cellOralTel = @"13932888888";
+
     //面试时间
-    oi.cellOralTime = @"2011/3/12 22:20:10";
     //TODO:工作类型
-    oi.cellOralWorkType = @"兼职";
-    //TODO:联系人
-    oi.cellOralContacts = @"黄博士";
-    //TODO:入职时间
-    oi.cellOfferTime = @"2020/2/2 22:22:11";
+    oi.cellOralWorkType = [dic objectForKey:WKEY_WORK_TYPE];
+    //联系人
+    oi.cellOralContacts = [dic objectForKey:WKEY_LINKMAN];
+    //入职时间
+    oi.cellOfferTime = [dic objectForKey:WKEY_EMP_TIME];
     //工作年限
-    oi.cellWorkYear = @"10年";
+    oi.cellWorkYear = [dic objectForKey:WKEY_WORK_YEAR];;
     return oi;
 }
 -(void)sendTouDiRequest:(NSString *)oralId{
