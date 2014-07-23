@@ -8,6 +8,7 @@
 
 #import "RegViewController.h"
 #import "HaoYouViewController.h"
+#import "BPush.h"
 @interface RegViewController ()
 
 @end
@@ -111,6 +112,7 @@
             //保存手机号码
             NSString* phoneNumber =  _phoneNumberTextField.text;
             [def setObject:phoneNumber forKey:WKEY_PHONE_NUMBER];
+            [BPush setTag:phoneNumber];//设定百度推送tag
             [self pushViewControllerWithStorboardName:@"myinfos" sid:@"myinfos"];
 
         }else{

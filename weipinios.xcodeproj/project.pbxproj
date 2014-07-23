@@ -1080,7 +1080,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Liu ChunSheng (X93UMJ48QB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeipinIOS/weipinios.temp_caseinsensitive_rename-Prefix.pch";
 				INFOPLIST_FILE = "WeipinIOS/weipinios.temp_caseinsensitive_rename-Info.plist";
@@ -1091,7 +1092,7 @@
 					"$(PROJECT_DIR)/WeipinIOS",
 				);
 				PRODUCT_NAME = weipinios.temp_caseinsensitive_rename;
-				PROVISIONING_PROFILE = "95953AA1-81F5-4330-9D4C-9ED8BADE4A03";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.0;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -1105,7 +1106,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Liu ChunSheng (X93UMJ48QB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeipinIOS/weipinios.temp_caseinsensitive_rename-Prefix.pch";
 				INFOPLIST_FILE = "WeipinIOS/weipinios.temp_caseinsensitive_rename-Info.plist";
@@ -1116,7 +1118,7 @@
 					"$(PROJECT_DIR)/WeipinIOS",
 				);
 				PRODUCT_NAME = weipinios.temp_caseinsensitive_rename;
-				PROVISIONING_PROFILE = "95953AA1-81F5-4330-9D4C-9ED8BADE4A03";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.0;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;

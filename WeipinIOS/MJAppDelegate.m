@@ -9,6 +9,7 @@
 #import "MJAppDelegate.h"
 #import "UMSocial.h"
 #import "UMSocialWechatHandler.h"
+#import "ConfigKey.h"
 
 @implementation MJAppDelegate
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
@@ -42,23 +43,29 @@
 didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     [BPush handleNotification:userInfo]; // 可选
-    for (id key in userInfo) {
-
-        
-
-        NSLog(@"key: %@, value: %@", key, [userInfo objectForKey:key]);
-
-        
-
-    }  
-
-//    [UIApplication sharedApplication].applicationIconBadgeNumber = 1;
+    UILocalNotification *notification = [[UILocalNotification alloc]init];
+    notification.applicationIconBadgeNumber = 1;
+    notification.soundName= UILocalNotificationDefaultSoundName;
+    notification.alertBody=@"您有新的面试消息";
+    notification.alertAction = @"查看";
+    notification.userInfo = userInfo;
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    [notification release];
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 1;
+}
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 1;
+    
 }
 //如果推送通知注册成功，则自动调用这个方法。deviceToken 是什么？我估计应该是设备授权码吧
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     NSLog(@"deviceToken: %@", deviceToken);
     [BPush registerDeviceToken:deviceToken]; // 必须
-    
+    NSString *pushToken = [[[[deviceToken description]
+                             stringByReplacingOccurrencesOfString:@"<" withString:@""]
+                            stringByReplacingOccurrencesOfString:@">" withString:@""]
+                           stringByReplacingOccurrencesOfString:@" " withString:@""] ;
+    NSLog(@"TokenString:%@",pushToken);
     [BPush bindChannel]; // 必须。可以在其它时机调用，只有在该方法返回（通过onMethod:response:回调）绑定成功时，app才能接收到Push消息。一个app绑定成功至少一次即可（如果access token变更请重新绑定）。
 }
 //对应的，失败就是：
