@@ -11,3 +11,4 @@
 #define WKEY_SAVE_USERINFO @"userInfo"
 #define WKEY_PHONE_NUMBER @"phoneNumber"
 #define WKEY_ORAL_COUNT @"oralCount"
+#define WKEY_DEVICES_TOKEN @"token"

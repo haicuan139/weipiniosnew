@@ -66,6 +66,9 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
                             stringByReplacingOccurrencesOfString:@">" withString:@""]
                            stringByReplacingOccurrencesOfString:@" " withString:@""] ;
     NSLog(@"TokenString:%@",pushToken);
+    //保存token
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    [def setObject:pushToken forKey:WKEY_DEVICES_TOKEN];
     [BPush bindChannel]; // 必须。可以在其它时机调用，只有在该方法返回（通过onMethod:response:回调）绑定成功时，app才能接收到Push消息。一个app绑定成功至少一次即可（如果access token变更请重新绑定）。
 }
 //对应的，失败就是：

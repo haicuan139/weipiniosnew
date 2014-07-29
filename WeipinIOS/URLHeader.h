@@ -97,6 +97,8 @@
 #define WKEY_WORK_TYPE @"hireType"
 //工作年限
 #define WKEY_WORK_YEAR @"workYear"
+//IOS push token
+#define WPOST_PARAMS_TOKEN @"userToken"
 
 
 

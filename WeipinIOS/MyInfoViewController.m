@@ -100,6 +100,9 @@
         [req setPostValue:myinfos.salary forKey:WPOST_PARAMS_SALARY];
         [req setPostValue:myinfos.workType forKey:WPOST_PARAMS_WORK_TYPE];
         [req setPostValue:myinfos.currentState forKey:WPOST_PARAMS_USER_STATE];
+        [req setPostValue:myinfos.name forKey:WPOST_PARAMS_USERNAME];
+        NSString* token = [ud objectForKey:WKEY_DEVICES_TOKEN];
+        [req setPostValue:token forKey:WPOST_PARAMS_TOKEN];
         [req startAsynchronous];
     }
 }
@@ -127,6 +130,8 @@
         [ud setBool:YES forKey:WKEY_SAVE_USERINFO];
         //设置面试次数
         [ud setInteger:5  forKey:WKEY_ORAL_COUNT];
+        NSString* phoneNumber = [ud objectForKey:WKEY_PHONE_NUMBER];
+                    [BPush setTag:phoneNumber];//设定百度推送tag
         //回到主界面
             self.navigationItem.backBarButtonItem.enabled = YES;
         [self.navigationController popToRootViewControllerAnimated:true];
