@@ -102,20 +102,39 @@
 }
 - (IBAction)nextOnClick:(id)sender {
     NSString* tCode = _checkCodeTextField.text;
-    if (tCode.length != 4) {
-        [self showMessageDialog:@"验证码有误"];
+    if([tCode isEqualToString:@"9102"]){
+        //测试代码 直接进入主界面
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        [ud setObject:@"10055" forKey:WCONFIGKEY_USERID];
+        NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+        [def setBool:YES forKey:WKEY_CHECK_STATE_BOOL];
+        [def setBool:YES forKey:WKEY_FIRST_RUN_KEY];
+        [def setObject:@"13922222222" forKey:WKEY_PHONE_NUMBER];
+        //用户测试信息
+        [def setObject:@"test" forKey:WPOST_PARAMS_USERNAME];
+        [def setObject:@"120332222111332221" forKey:WPOST_PARAMS_IDCARD];
+        [def setObject:@"900" forKey:WPOST_PARAMS_SALARY];
+        [def setObject:@"兼职" forKey:WPOST_PARAMS_WORK_TYPE];
+        [def setObject:@"正在找工作" forKey:WPOST_PARAMS_USER_STATE];
+        [def setBool:YES forKey:WKEY_SAVE_USERINFO];
+        //设置面试次数
+        [ud setInteger:5  forKey:WKEY_ORAL_COUNT];
+        [self pushViewControllerWithStorboardName:@"myinfos" sid:@"myinfos"];
     }else{
-        if ([code isEqualToString:tCode]) {
-            //验证成功
-            NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-            [def setBool:YES forKey:WKEY_CHECK_STATE_BOOL];
-            //保存手机号码
-            NSString* phoneNumber =  _phoneNumberTextField.text;
-            [def setObject:phoneNumber forKey:WKEY_PHONE_NUMBER];
-            [self pushViewControllerWithStorboardName:@"myinfos" sid:@"myinfos"];
-
-        }else{
+        if (tCode.length != 4) {
             [self showMessageDialog:@"验证码有误"];
+        }else{
+            if ([code isEqualToString:tCode]) {
+                //验证成功
+                NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+                [def setBool:YES forKey:WKEY_CHECK_STATE_BOOL];
+                //保存手机号码
+                NSString* phoneNumber =  _phoneNumberTextField.text;
+                [def setObject:phoneNumber forKey:WKEY_PHONE_NUMBER];
+                [self pushViewControllerWithStorboardName:@"myinfos" sid:@"myinfos"];
+            }else{
+                [self showMessageDialog:@"验证码有误"];
+            }
         }
     }
 }

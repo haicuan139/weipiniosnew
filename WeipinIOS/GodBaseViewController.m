@@ -120,8 +120,8 @@
 }
 -(void)sendRequest:(NSString *)url{
     ASIFormDataRequest *req = [self getPostHttpRequest:url];
-//    NSString* userId = [self getUserId];
-    [req setPostValue:@"10045" forKey:WCONFIGKEY_USERID];
+    NSString* userId = [self getUserId];
+    [req setPostValue:userId forKey:WCONFIGKEY_USERID];
     [req startAsynchronous];
 }
 -(void)sendRequest{

@@ -25,6 +25,12 @@
 }
 
 - (IBAction)doneButtonOnClick:(id)sender {
+    if ([[self getUserId] isEqualToString:@"10055"]) {
+        //如果是测试ID直接返回
+        self.navigationItem.backBarButtonItem.enabled = YES;
+        [self.navigationController popToRootViewControllerAnimated:true];
+        return;
+    }
     //提交个人资料
     NSString* name = self.nameTextField.text;
     NSString* idCard = self.idCardTextField.text;
@@ -191,7 +197,6 @@
         //设置评分图片
         UIImage *image = [UIImage imageNamed:@"rating_full.png"];
         [_ratingImage setImage:image];
-
     }else{
         self.navigationItem.hidesBackButton = YES;
     }

@@ -1092,7 +1092,7 @@
 					"$(PROJECT_DIR)/WeipinIOS",
 				);
 				PRODUCT_NAME = weipinios.temp_caseinsensitive_rename;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "80D036CE-4673-4106-8561-5FB89F57F5C5";
 				SDKROOT = iphoneos7.0;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -1118,7 +1118,7 @@
 					"$(PROJECT_DIR)/WeipinIOS",
 				);
 				PRODUCT_NAME = weipinios.temp_caseinsensitive_rename;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "80D036CE-4673-4106-8561-5FB89F57F5C5";
 				SDKROOT = iphoneos7.0;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;

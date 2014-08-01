@@ -152,10 +152,10 @@
 
     return cell;
 }
-//-(void)viewDidAppear:(BOOL)animated{
-//    [super viewDidAppear:animated];
-//    [self sendRequest];
-//}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self sendRequest];
+}
 -(void)onItemClick:(NSInteger)index
 {
     MJAppDelegate *appDelegate = (MJAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -199,7 +199,7 @@
     NSString *res = [request responseString];
     NSArray *arr = [self toArrayOrNSDictionary:res];
     NSMutableArray *oralArray = [[NSMutableArray alloc] init];
-    NSLog(@"%@",res);
+    NSLog(@"%@数据列表:",res);
     if (arr == nil) {
         NSLog(@"解析失败");
     }else{
